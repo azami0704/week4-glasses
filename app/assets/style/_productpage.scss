@@ -1,0 +1,178 @@
+.product-tabs{
+    padding: 0;
+    @include tablet{
+        .container-layout{
+            padding: 0;
+        }
+    }
+    @include mobile-md{
+        .container-layout{
+            max-width: 767px;
+            padding: 0;
+        }
+        
+    }
+}
+
+.product-tabs-list{
+    display: flex;
+    justify-content: center;
+    li{
+        padding: 24px 0;
+        border: 1px solid #DCDCDC;
+        flex: 1;
+        font-size: 36px;
+        a{
+            display: block;
+            color: #000000;
+        }
+        @include tablet{
+            font-size: 24px;
+            padding: 16px 0;
+        }
+        @include mobile-md{
+            font-size: 16px;
+        }
+    }
+    .selected{
+        padding-bottom: 16px;
+        border-bottom: 8px solid #AA0601;
+        @include tablet{
+            padding-bottom: 8px;
+        }
+    }
+}
+
+.head-banner{
+    padding: 0;
+}
+
+.head-banner-list{
+    width: 100%;
+    height: 296px;
+    display: flex;
+    justify-content: center;
+    li{
+        width: 50%;
+    }
+    .banner-left{
+        background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-1.png?raw=true)no-repeat center center;
+        background-size: cover;
+        &-sunglasses{
+            background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-3.png?raw=true)no-repeat center center;
+            background-size: cover;
+        }
+    }
+    .banner-right{
+        background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-2.png?raw=true)no-repeat center center;
+        background-size: cover;
+        &-sunglasses{
+            background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-4.png?raw=true)no-repeat center center;
+            background-size: cover;
+        }
+    }
+    @include mobile-md{
+        .banner-left{
+            background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-sm-1.png?raw=true)no-repeat center center;
+            background-size: cover;
+            &-sunglasses{
+                background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-sm-3.png?raw=true)no-repeat center center;
+                background-size: cover;
+            }
+        }
+        .banner-right{
+            background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-sm-2.png?raw=true)no-repeat center center;
+            background-size: cover;
+            &-sunglasses{
+                background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-sm-4.png?raw=true)no-repeat center center;
+                background-size: cover;
+            }
+        }
+    }
+    @include mobile-sm{
+        height: 136px;
+    }
+}
+
+.product-introduce{
+    @include mobile-sm{
+        margin-bottom: 24px;
+        h2{
+            font-size: 24px;
+        }
+    }
+}
+
+.product-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 32px -12px 80px -12px;
+    row-gap: 80px;
+    .product-card{
+        width: 25%;
+        padding: 0 12px;
+        .product-txt{
+            display: flex;
+            justify-content: space-between;
+            font-size: 24px;
+            .price{
+                color: $main-background;
+            }
+        }
+        .product-color{
+            display: flex;
+            .color-block{
+                width: 24px;
+                height: 24px;
+                background-color: #5F3E2D;
+                border-radius: 4px;
+                margin-right: 8px;
+            }
+            & :last-child{
+                background-color: #B75929;
+            }
+        }
+        &-sunglasses{
+            width: 33.3%;
+            padding: 0 12px;
+            .product-txt{
+                display: flex;
+                justify-content: space-between;
+                font-size: 24px;
+                .price{
+                    color: $main-background;
+                }
+            }
+            .product-color{
+                display: flex;
+                .color-block{
+                    width: 24px;
+                    height: 24px;
+                    background-color: #5F3E2D;
+                    border-radius: 4px;
+                    margin-right: 8px;
+                }
+                & :last-child{
+                    background-color: #B75929;
+                }
+            }
+        }
+    }
+    @include tablet{
+        row-gap: 40px;
+        .product-card,
+        .product-card-sunglasses{
+            width: 50%;
+        }
+    }
+    @include mobile-sm{
+        row-gap: 24px;
+        margin: 24px 0 64px 0;
+        .product-card,
+        .product-card-sunglasses{
+            width: 100%;
+            padding: 0;
+        }
+    }
+}

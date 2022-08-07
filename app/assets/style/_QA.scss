@@ -1,0 +1,25 @@
+.quest-glasses{
+    margin: 32px 0 24px 0;
+    @include mobile-sm{
+        margin: 24px 0;
+    }
+}
+
+.qa-list{
+    width: 66%;
+    @include mobile-md{
+        width: 100%;
+    }
+    @include mobile-sm{
+        margin-bottom: 24px;
+    }
+    li{
+        margin-bottom: 32px;
+        @include mobile-sm{
+            margin-bottom: 24px;
+        }
+        h4{
+            margin-bottom: 8px;
+        }
+    }
+}
